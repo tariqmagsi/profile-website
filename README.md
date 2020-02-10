@@ -1,6 +1,6 @@
 # profile-website
 
-For installing node_modules run following commands in server folder:
+For installing node_modules run following commands in root folder:
 
     npm run client-install
 
