@@ -1,0 +1,37 @@
+{
+  "name": "tariq-profile",
+  "version": "1.0.0",
+  "description": "This is my CV website",
+  "main": "index.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "client-install": "cd profile && npm install",
+    "start": "node index.js",
+    "client": "npm start --prefix profile",
+    "server": "env-cmd -f server/config/dev.env nodemon",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix profile && npm run build --prefix profile"
+  },
+  "author": "Tariq Magsi",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@sendgrid/mail": "^6.4.0",
+    "bcryptjs": "^2.4.3",
+    "bootstrap-4-react": "0.0.59",
+    "concurrently": "^4.1.2",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-remove-route": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.1",
+    "react-bootstrap": "^1.0.0-beta.12"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "nodemon": "^1.19.2"
+  }
+}
